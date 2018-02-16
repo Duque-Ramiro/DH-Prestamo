@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Calculadora de Prestamo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Calculadora de Prestamo">
+
+    <title>Calculadora de Prestamo</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+
+    <body class="w-100">
+        <div class="container">
+            <header class="my-3">
+                <h3 class="text-primary">PRESTAMOS.COM</h3>
+                <ul class="nav nav-pills bg-primary rounded my-3 py-2">
+                    <li class="nav-item mr-2">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item mr-2 active">
+                        <a class="nav-link active" href="#calculadora">Calculadora</a>
+                    </li>
+                </ul>
+            </header>
+              <main>
+                <div>
+                    <section>
+                        <div class="my-4">
+                            <h4 class="text-primary">C&aacute;lculo de Pr&eacute;stamos</h4>
+                            C&aacute;lculo de Pr&eacute;stamos - Para el c&aacute;lculo de pr&eacute;stamos, esta calculadora le permite
+                            calcular la cuota mensual a pagar en su pr&eacute;stamo, as&iacute; como el total de intereses.
+                        </div>
+                    </section>
+                    <section>
+                        <div class="border border-primary rounded p-4">
+                            <legend class="">C&aacute;lculo de Pr&eacute;stamos</legend>
+
+                            <div class="row pb-3">
+                                <label for="txtImporte" class="col-sm-2">Importe</label>
+                                <div class="col-sm-4">
+                                    <input type="number" id="txtImporte" name="txtImporte" step="0.01" min="0" required class="form-control form-control-sm text-right" placeholder="$" />
+                                </div>
+                            </div>
+                            <div class="row pb-3">
+                                <label for="cboProvincia" class="col-sm-2">Provincia</label>
+                                <div class="col-sm-4">
+                                    <select class="form-control form-control-sm" id="cboProvincia">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row pb-3">
+                                <label for="txtTaza" class="col-sm-2">Taza&nbsp;de&nbsp;inter&eacute;s</label>
+                                <div class="col-sm-4">
+                                    <input type="number" id="txtTaza" name="txtTaza" step="0.01" min="0" required class="form-control form-control-sm text-right" placeholder="%" />
+                                </div>
+                            </div>
+                            <div class="row pb-3">
+                                <div class="col-sm-6">
+                                    <button class="btn btn-primary" id="btnCalcular" onClick="btnCalcular_onClick();">
+                                        <span class="">Calcular</span>
+                                    </button>
+                                    <button class="btn btn-primary" id="btnBorrar" onClick="btnBorrar_onClick();">
+                                        <span class="">Borrar</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row pb-3">
+                                <label for="txtCuota" class="col-sm-2">Cuota&nbsp;Mensual</label>
+                                <div class="col-sm-4">
+                                    <input type="number" id="txtCuota" name="txtCuota" class="form-control form-control-sm text-right" readonly />
+                                </div>
+                            </div>
+                            <div class="row pb-3">
+                                <label for="txtTotal" class="col-sm-2">Total&nbsp;a&nbsp;Pagar</label>
+                                <div class="col-sm-4">
+                                    <input type="number" id="txtTotal" name="txtTotal" class="form-control form-control-sm text-right" readonly placeholder="$" />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
