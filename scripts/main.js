@@ -6,10 +6,9 @@ window.onload = function(){
 function cargarProvincias(){
     var xhttp = new XMLHttpRequest();
     var sLink = "https://raw.githubusercontent.com/dariosus/jsonProvincias/master/provincias.json"
-    //xhttp.responseType = "json"
     xhttp.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200) {
-            var oProv = JSON.parse(this.responseText); //this.response 
+            var oProv = JSON.parse(this.responseText);
             var cboProvincia = document.getElementById("cboProvincia");
 
             for(i=0;i<oProv.length;i++){
